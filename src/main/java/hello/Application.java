@@ -76,12 +76,14 @@ public class Application {
     mypositiony = me.y;
     if(licznik %2 ==0){
         System.out.println(me.x+ " "+me.y+ "L");
-        return "L";
+        if(licznik %4 ==0) return "L"; else return "R";
     }
     else {
       System.out.println(me.x+ " "+me.y+ "T");
-      if(hitSomeone(me, arenaUpdate)) licznik++;
-      return "T";
+      if(hitSomeone(me, arenaUpdate)) {
+          licznik++;
+          return "T";
+        } else return "F";
     }
   }
 
