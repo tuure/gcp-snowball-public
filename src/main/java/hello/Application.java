@@ -64,7 +64,7 @@ public class Application {
     System.out.println(arenaUpdate);
     String[] commands = new String[]{"F", "R", "L", "T"};
     int i = new Random().nextInt(4);
-    PlayerState me = arenaUpdate.arena.state.getOrDefault(href, null);
+    PlayerState me = arenaUpdate.arena.state.getOrDefault(arenaUpdate._links.self.href, null);
     int max = 0;
     licznik++;
     if(me.wasHit && (!ruch || !(mypositiony == me.y && mypositionx == me.x))) {
