@@ -67,22 +67,23 @@ public class Application {
     PlayerState me = arenaUpdate.arena.state.getOrDefault(href, null);
     int max = 0;
     licznik++;
-    if(me.wasHit && !(!ruch || mypositiony.equals( me.y) && mypositionx.equals(me.x))) {
-        ruch = true;
-        return "F";
-    }
-    ruch = false;
-    mypositionx = me.x;
-    mypositiony = me.y;
-    if(licznik %2 ==0){
-        System.out.println(me.x+ " "+me.y+ "L");
-        return "L";
-    }
-    else {
-      System.out.println(me.x+ " "+me.y+ "T");
-      if(hitSomeone(me, arenaUpdate)) licznik++;
-      return "T";
-    }
+    return "T";
+    // if(me.wasHit && !(!ruch || mypositiony.equals( me.y) && mypositionx.equals(me.x))) {
+    //     ruch = true;
+    //     return "F";
+    // }
+    // ruch = false;
+    // mypositionx = me.x;
+    // mypositiony = me.y;
+    // if(licznik %2 ==0){
+    //     System.out.println(me.x+ " "+me.y+ "L");
+    //     return "L";
+    // }
+    // else {
+    //   System.out.println(me.x+ " "+me.y+ "T");
+    //   if(hitSomeone(me, arenaUpdate)) licznik++;
+    //   return "T";
+    // }
   }
 
     private boolean hitSomeone(PlayerState me, ArenaUpdate arenaUpdate) {
