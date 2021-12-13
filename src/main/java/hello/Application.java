@@ -69,11 +69,13 @@ public class Application {
     licznik++;
     if(me.wasHit && (!ruch || !(mypositiony == me.y && mypositionx == me.x))) {
         ruch = true;
+        mypositionx = me.x;
+        mypositiony = me.y;
         return "F";
     }
     ruch = false;
-    mypositionx = me.x;
-    mypositiony = me.y;
+    mypositionx = -1;
+    mypositiony = -1;
     if(licznik %2 ==0){
         System.out.println(me.x+ " "+me.y+ "L");
         if(licznik %4 ==0) return "L"; else return "R";
