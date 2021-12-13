@@ -68,7 +68,7 @@ public class Application {
     int max = 0;
     licznik++;
     if(me.wasHit && (!ruch)) {
-        if(!(mypositiony == me.y && mypositionx == me.x)) return "L";
+        if(mypositiony == me.y && mypositionx == me.x) return "L";
         ruch = true;
         mypositionx = me.x;
         mypositiony = me.y;
