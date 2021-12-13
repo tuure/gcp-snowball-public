@@ -76,7 +76,7 @@ public class Application {
     ruch = false;
     if(licznik %2 ==0){
         System.out.println(me.x+ " "+me.y+ "L");
-        if(licznik %4 ==0 || (mypositiony == me.y && mypositionx == me.x)) {
+        if(licznik %6 ==0 || (mypositiony == me.y && mypositionx == me.x)) {
             mypositionx = me.x;
             mypositiony = me.y;
             return "L"; }
