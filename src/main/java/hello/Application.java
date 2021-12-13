@@ -67,13 +67,15 @@ public class Application {
     PlayerState me = arenaUpdate.arena.state.getOrDefault(arenaUpdate._links.self.href, null);
     int max = 0;
     licznik++;
-    if(me.wasHit && (!ruch || !(mypositiony == me.y && mypositionx == me.x))) {
+    if(me.wasHit && (!ruch)) {
+        if(!(mypositiony == me.y && mypositionx == me.x)) return "L";
         ruch = true;
         mypositionx = me.x;
         mypositiony = me.y;
         return "F";
     }
     ruch = false;
+
     if(licznik %2 ==0){
         System.out.println(me.x+ " "+me.y+ "L");
         if(licznik %6 ==0 || (mypositiony == me.y && mypositionx == me.x)) {
