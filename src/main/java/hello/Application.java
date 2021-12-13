@@ -17,7 +17,7 @@ public class Application {
     Boolean ruch = false;
     Integer mypositiony =0;
   Integer licznik =0;
-  String href = "https://java-springboot-pdl7txyzda-uc.a.run.app";
+  String href = "http://34.149.78.80.sslip.io";
 
   static class Self {
     public String href;
